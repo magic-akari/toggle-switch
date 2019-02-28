@@ -1,0 +1,33 @@
+html {
+    box-sizing: border-box;
+    line-height: 1.15;
+    text-size-adjust: 100%;
+}
+
+* {
+    box-sizing: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    margin: auto;
+    padding: 1rem;
+}
+
+style[contenteditable="true"] {
+    display: block;
+    white-space: pre-line;
+}
