@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Pure CSS toggle switch</title>
+        <link rel="stylesheet" href="./src/toggle-switch.css" />
+        <style>
+            html {
+                box-sizing: border-box;
+                line-height: 1.15;
+                text-size-adjust: 100%;
+            }
+
+            * {
+                box-sizing: inherit;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            main {
+                margin: auto;
+
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+                grid-template-rows: auto;
+                grid-gap: 1rem;
+                padding: 1rem;
+            }
+
+            style[contenteditable="true"] {
+                white-space: pre-line;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Pure CSS toggle switch</h1>
+        <main>
+            <section>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="toggle-switch-input" class="toggle-switch-input" />
+                    <label for="toggle-switch-input" class="toggle-switch-label">
+                        <span class="toggle-switch-ripple"></span>
+                    </label>
+                    default toggle-switch
+                </label>
+            </section>
+
+            <section>
+                <label class="toggle-switch another-toggle-switch">
+                    <input type="checkbox" id="another-toggle-switch-input" />
+                    <label for="another-toggle-switch-input">
+                        <span class="toggle-switch-ripple"></span>
+                    </label>
+                </label>
+                <p>toggle-switch without label</p>
+            </section>
+
+            <section>
+                <label class="toggle-switch no-ripple-toggle-switch">
+                    <input type="checkbox" id="no-ripple-toggle-switch-input" />
+                    <label for="no-ripple-toggle-switch-input"></label>
+                    toggle-switch without repple
+                </label>
+            </section>
+
+            <section>
+                <label class="toggle-switch disabled">
+                    <input type="checkbox" id="disabled-toggle-switch-input" disabled/>
+                    <label for="disabled-toggle-switch-input">
+                        <span class="toggle-switch-ripple"></span>
+                    </label>
+                    disabled toggle switch
+                </label>
+            </section>
+
+            <section>
+                <label class="toggle-switch">
+                    label reversed toggle switch
+                    <input type="checkbox" id="label-reversed-toggle-switch-input" />
+                    <label for="label-reversed-toggle-switch-input">
+                        <span class="toggle-switch-ripple"></span>
+                    </label>
+                </label>
+            </section>
+
+            <section>
+                <label class="toggle-switch my-toggle-switch">
+                    <input type="checkbox" id="my-toggle-switch-input" />
+                    <label for="my-toggle-switch-input">
+                        <span class="toggle-switch-ripple"></span>
+                    </label>
+                    my-toggle-switch
+                </label>
+
+                <pre>
+<style contenteditable="true">
+.my-toggle-switch {
+    --bar-height: 20px;
+    --bar-width: 56px;
+    --knob-size: 24px;
+    --theme-color: #e81aaa;
+}
+</style>
+                </pre>
+            </section>
+        </main>
+    </body>
+</html>

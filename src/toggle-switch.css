@@ -1,0 +1,166 @@
+.toggle-switch {
+    --bar-height: 14px;
+    --bar-width: 32px;
+
+    --knob-size: 20px;
+
+    --offset: calc(var(--knob-size) - var(--bar-height));
+    --width: calc(var(--bar-width) + var(--offset));
+    --motion-length: calc(((var(--bar-width) - var(--bar-height)) / 2));
+
+    --transition-duration: 200ms;
+
+    --transition: all var(--transition-duration) ease-in-out;
+    --backgroung-color: #eee;
+    --knob-color: #fff;
+    --theme-color: #1a73e8;
+    --box-shadow: 0 0 var(--offset) #11111180;
+    --margin: 8px;
+
+    box-sizing: border-box;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    min-height: var(--bar-height);
+    min-width: var(--bar-width);
+
+    margin: var(--margin);
+    user-select: none;
+}
+
+.toggle-switch.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.toggle-switch > input,
+.toggle-switch-input {
+    opacity: 0;
+    position: absolute;
+
+    height: 0;
+    width: 0;
+}
+
+.toggle-switch > label,
+.toggle-switch-label {
+    box-sizing: border-box;
+    position: relative;
+
+    height: var(--bar-height);
+    width: var(--bar-width);
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: var(--margin);
+    user-select: none;
+}
+
+/* bar */
+.toggle-switch > label::before,
+.toggle-switch-label::before {
+    content: "";
+    box-sizing: border-box;
+
+    height: var(--bar-height);
+    width: var(--bar-width);
+
+    background: var(--backgroung-color);
+
+    border-radius: var(--bar-height);
+    border: 1px solid var(--theme-color);
+
+    transition: var(--transition);
+}
+
+/* checked bar */
+.toggle-switch > :checked + label::before,
+:checked + .toggle-switch-label::before {
+    background: var(--theme-color);
+    opacity: 0.5;
+}
+
+/* knob */
+.toggle-switch > label::after,
+.toggle-switch-label::after {
+    content: "";
+    box-sizing: border-box;
+
+    position: absolute;
+
+    height: var(--knob-size);
+    width: var(--knob-size);
+
+    background: var(--knob-color);
+
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+
+    transform: translateX(calc(var(--motion-length) * -1));
+    transition: var(--transition);
+}
+
+/* checked knob */
+.toggle-switch > :checked + label::after,
+:checked + .toggle-switch-label::after {
+    background: var(--theme-color);
+
+    transform: translateX(var(--motion-length));
+}
+
+/* ripple */
+.toggle-switch-ripple {
+    box-sizing: border-box;
+    position: absolute;
+
+    --size: calc(var(--knob-size) * 2);
+
+    height: var(--size);
+    width: var(--size);
+
+    color: var(--theme-color);
+
+    border-radius: 50%;
+
+    transform: translateX(calc(var(--motion-length) * -1));
+    transition: var(--transition);
+
+    overflow: hidden;
+}
+
+:checked + label > .toggle-switch-ripple,
+:checked + .toggle-switch-label > .toggle-switch-ripple {
+    transform: translateX(var(--motion-length));
+}
+
+.toggle-switch-ripple:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: radial-gradient(circle, currentColor 10%, transparent 10%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform 0.5s, opacity 1s;
+
+    pointer-events: none;
+}
+
+:active > .toggle-switch-ripple:after {
+    transform: scale(0, 0);
+    opacity: 0.2;
+    transition: 0s;
+}
+
+:hover > .toggle-switch-ripple:after,
+.toggle-switch:focus-within .toggle-switch-ripple:after {
+    opacity: 0.1;
+}
