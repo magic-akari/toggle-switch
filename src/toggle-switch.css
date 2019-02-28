@@ -3,19 +3,19 @@
     --bar-width: 32px;
 
     --knob-size: 20px;
+    --knob-color: #fff;
 
-    --offset: calc(var(--knob-size) - var(--bar-height));
-    --width: calc(var(--bar-width) + var(--offset));
+    --switch-offset: calc(var(--knob-size) - var(--bar-height));
+    --switch-width: calc(var(--bar-width) + var(--switch-offset));
     --motion-length: calc(((var(--bar-width) - var(--bar-height)) / 2));
 
     --transition-duration: 200ms;
 
-    --transition: all var(--transition-duration) ease-in-out;
-    --backgroung-color: #eee;
-    --knob-color: #fff;
-    --theme-color: #1a73e8;
-    --box-shadow: 0 0 var(--offset) #11111180;
-    --margin: 8px;
+    --switch-transition: all var(--transition-duration) ease-in-out;
+    --switch-backgroung-color: #eee;
+    --switch-theme-color: #1a73e8;
+    --switch-box-shadow: 0 0 var(--switch-offset) #11111180;
+    --switch-margin: 8px;
 
     box-sizing: border-box;
     position: relative;
@@ -25,7 +25,7 @@
     min-height: var(--bar-height);
     min-width: var(--bar-width);
 
-    margin: var(--margin);
+    margin: var(--switch-margin);
     user-select: none;
 }
 
@@ -55,7 +55,7 @@
     justify-content: center;
     align-items: center;
 
-    margin: var(--margin);
+    margin: var(--switch-margin);
     user-select: none;
 }
 
@@ -68,18 +68,18 @@
     height: var(--bar-height);
     width: var(--bar-width);
 
-    background: var(--backgroung-color);
+    background: var(--switch-backgroung-color);
 
     border-radius: var(--bar-height);
-    border: 1px solid var(--theme-color);
+    border: 1px solid var(--switch-theme-color);
 
-    transition: var(--transition);
+    transition: var(--switch-transition);
 }
 
 /* checked bar */
 .toggle-switch > :checked + label::before,
 :checked + .toggle-switch-label::before {
-    background: var(--theme-color);
+    background: var(--switch-theme-color);
     opacity: 0.5;
 }
 
@@ -97,16 +97,16 @@
     background: var(--knob-color);
 
     border-radius: 50%;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--switch-box-shadow);
 
     transform: translateX(calc(var(--motion-length) * -1));
-    transition: var(--transition);
+    transition: var(--switch-transition);
 }
 
 /* checked knob */
 .toggle-switch > :checked + label::after,
 :checked + .toggle-switch-label::after {
-    background: var(--theme-color);
+    background: var(--switch-theme-color);
 
     transform: translateX(var(--motion-length));
 }
@@ -121,12 +121,12 @@
     height: var(--size);
     width: var(--size);
 
-    color: var(--theme-color);
+    color: var(--switch-theme-color);
 
     border-radius: 50%;
 
     transform: translateX(calc(var(--motion-length) * -1));
-    transition: var(--transition);
+    transition: var(--switch-transition);
 
     overflow: hidden;
 }
