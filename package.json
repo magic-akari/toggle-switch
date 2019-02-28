@@ -1,6 +1,6 @@
 {
     "name": "toggle-switch-css",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "Pure CSS toggle switch",
     "main": "build/toggle-switch.css",
     "repository": "https://github.com/magic-akari/toggle-switch.git",
