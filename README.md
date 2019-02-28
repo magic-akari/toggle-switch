@@ -24,7 +24,7 @@ yarn add toggle-switch-css
 </label>
 ```
 
-default css varable
+default css variables
 
 ```css
 .toggle-switch {
@@ -44,4 +44,4 @@ default css varable
 }
 ```
 
-## [demo](http://magic-akari.github.io/toggle-switch)
+## [demo](https://magic-akari.github.io/toggle-switch)
