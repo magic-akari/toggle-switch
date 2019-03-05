@@ -1,5 +1,7 @@
 # Pure CSS toggle switch
 
+## [demo](https://magic-akari.github.io/toggle-switch)
+
 ## install
 
 ```
@@ -34,7 +36,7 @@ default css variables
     --knob-color: #fff;
     --switch-offset: calc(var(--knob-size) - var(--bar-height));
     --switch-width: calc(var(--bar-width) + var(--switch-offset));
-    --motion-length: calc(((var(--bar-width) - var(--bar-height)) / 2));
+    --motion-length: calc((var(--bar-width) - var(--bar-height)) / 2);
     --transition-duration: 200ms;
     --switch-transition: all var(--transition-duration) ease-in-out;
     --switch-backgroung-color: #eee;
@@ -43,5 +45,3 @@ default css variables
     --switch-margin: 8px;
 }
 ```
-
-## [demo](https://magic-akari.github.io/toggle-switch)

@@ -16,7 +16,7 @@
         "listdiff": "prettier -l \"src/*.css\" \"*.{md,js}\""
     },
     "devDependencies": {
-        "autoprefixer": "^9.4.9",
+        "autoprefixer": "^9.4.10",
         "cssnano": "^4.1.10",
         "postcss": "^7.0.14",
         "postcss-cli": "^6.1.2",

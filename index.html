@@ -6,42 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Pure CSS toggle switch</title>
         <link rel="stylesheet" href="./src/toggle-switch.css" />
-        <style>
-            html {
-                box-sizing: border-box;
-                line-height: 1.15;
-                text-size-adjust: 100%;
-            }
-
-            * {
-                box-sizing: inherit;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-            }
-
-            body {
-                margin: 0;
-            }
-
-            h1 {
-                text-align: center;
-            }
-
-            main {
-                margin: auto;
-
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-                grid-template-rows: auto;
-                grid-gap: 1rem;
-                padding: 1rem;
-            }
-
-            style[contenteditable="true"] {
-                white-space: pre-line;
-                display: block;
-            }
-        </style>
+        <link rel="stylesheet" href="./index.css" />
     </head>
     <body>
         <h1>Pure CSS toggle switch</h1>
@@ -76,7 +41,7 @@
 
             <section>
                 <label class="toggle-switch disabled">
-                    <input type="checkbox" id="disabled-toggle-switch-input" disabled/>
+                    <input type="checkbox" id="disabled-toggle-switch-input" disabled />
                     <label for="disabled-toggle-switch-input">
                         <span class="toggle-switch-ripple"></span>
                     </label>
