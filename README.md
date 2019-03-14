@@ -36,7 +36,6 @@ default css variables
     --knob-color: #fff;
     --switch-offset: calc(var(--knob-size) - var(--bar-height));
     --switch-width: calc(var(--bar-width) + var(--switch-offset));
-    --motion-length: calc((var(--bar-width) - var(--bar-height)) / 2);
     --transition-duration: 200ms;
     --switch-transition: all var(--transition-duration) ease-in-out;
     --switch-backgroung-color: #eee;

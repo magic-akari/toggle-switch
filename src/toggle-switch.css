@@ -7,7 +7,6 @@
 
     --switch-offset: calc(var(--knob-size) - var(--bar-height));
     --switch-width: calc(var(--bar-width) + var(--switch-offset));
-    --motion-length: calc((var(--bar-width) - var(--bar-height)) / 2);
 
     --transition-duration: 200ms;
 
@@ -45,6 +44,8 @@
 
 .toggle-switch > label,
 .toggle-switch-label {
+    --knob-x: calc((var(--bar-height) - var(--bar-width)) / 2);
+
     box-sizing: border-box;
     position: relative;
 
@@ -57,6 +58,12 @@
 
     margin: var(--switch-margin);
     user-select: none;
+}
+
+/* checked */
+.toggle-switch > :checked + label,
+:checked + .toggle-switch-label {
+    --knob-x: calc((var(--bar-width) - var(--bar-height)) / 2);
 }
 
 /* bar */
@@ -99,7 +106,7 @@
     border-radius: 50%;
     box-shadow: var(--switch-box-shadow);
 
-    transform: translateX(calc(var(--motion-length) * -1));
+    transform: translateX(var(--knob-x));
     transition: var(--switch-transition);
 }
 
@@ -107,8 +114,6 @@
 .toggle-switch > :checked + label::after,
 :checked + .toggle-switch-label::after {
     background: var(--switch-theme-color);
-
-    transform: translateX(var(--motion-length));
 }
 
 /* ripple */
@@ -125,15 +130,10 @@
 
     border-radius: 50%;
 
-    transform: translateX(calc(var(--motion-length) * -1));
+    transform: translateX(var(--knob-x));
     transition: var(--switch-transition);
 
     overflow: hidden;
-}
-
-:checked + label > .toggle-switch-ripple,
-:checked + .toggle-switch-label > .toggle-switch-ripple {
-    transform: translateX(var(--motion-length));
 }
 
 .toggle-switch-ripple:after {
