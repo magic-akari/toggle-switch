@@ -1,5 +1,7 @@
 module.exports = {
-    map: true,
+    map: {
+        inline: false
+    },
     plugins: {
         autoprefixer: {},
         cssnano: {}
