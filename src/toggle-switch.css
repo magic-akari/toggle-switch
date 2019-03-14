@@ -123,5 +123,5 @@
 :focus + .toggle-switch-label::after,
 .toggle-switch:hover > label::after,
 :hover > .toggle-switch-label::after {
-    box-shadow: 0 0 0 calc(var(--knob-size) / 2) rgba(var(--switch-theme-rgb), 0.2);
+    box-shadow: var(--switch-box-shadow), 0 0 0 calc(var(--knob-size) / 2) rgba(var(--switch-theme-rgb), 0.2);
 }
