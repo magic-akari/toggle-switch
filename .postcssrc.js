@@ -1,9 +1,9 @@
 module.exports = {
     map: {
-        inline: false
+        inline: false,
     },
     plugins: {
         autoprefixer: {},
-        cssnano: {}
-    }
+        cssnano: {},
+    },
 };
