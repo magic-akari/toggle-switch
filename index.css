@@ -19,16 +19,15 @@ h1 {
 }
 
 main {
-    margin: auto;
-
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-template-rows: auto;
     grid-gap: 1rem;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    margin: auto;
     padding: 1rem;
 }
 
 style[contenteditable="true"] {
-    white-space: pre-line;
     display: block;
+    white-space: pre-line;
 }

@@ -1,30 +1,29 @@
 .toggle-switch {
+    /** bar */
     --bar-height: 14px;
     --bar-width: 32px;
     --bar-color: #eee;
 
+    /** knob */
     --knob-size: 20px;
     --knob-color: #fff;
 
+    /** switch */
     --switch-offset: calc(var(--knob-size) - var(--bar-height));
     --switch-width: calc(var(--bar-width) + var(--switch-offset));
-
     --transition-duration: 200ms;
-
     --switch-transition: all var(--transition-duration) ease-in-out;
     --switch-theme-rgb: 26, 115, 232;
     --switch-theme-color: rgb(var(--switch-theme-rgb));
     --switch-box-shadow: 0 0 var(--switch-offset) #11111180;
     --switch-margin: 8px;
 
-    box-sizing: border-box;
     position: relative;
     display: inline-flex;
     align-items: center;
-
-    min-height: var(--bar-height);
+    box-sizing: border-box;
     min-width: var(--bar-width);
-
+    min-height: var(--bar-height);
     margin: var(--switch-margin);
     user-select: none;
 }
@@ -36,27 +35,23 @@
 
 .toggle-switch > input,
 .toggle-switch-input {
-    opacity: 0;
     position: absolute;
-
-    height: 0;
     width: 0;
+    height: 0;
+    opacity: 0;
 }
 
 .toggle-switch > label,
 .toggle-switch-label {
     --knob-x: calc((var(--bar-height) - var(--bar-width)) / 2);
 
-    box-sizing: border-box;
     position: relative;
-
-    height: var(--bar-height);
-    width: var(--bar-width);
-
     display: inline-flex;
-    justify-content: center;
     align-items: center;
-
+    justify-content: center;
+    box-sizing: border-box;
+    width: var(--bar-width);
+    height: var(--bar-height);
     margin: var(--switch-margin);
     user-select: none;
 }
@@ -70,20 +65,15 @@
 /* bar */
 .toggle-switch > label::before,
 .toggle-switch-label::before {
-    content: "";
     box-sizing: border-box;
-
-    height: var(--bar-height);
     width: var(--bar-width);
-
-    opacity: 0.5;
-
+    height: var(--bar-height);
     background: var(--bar-color);
-
-    border-radius: var(--bar-height);
     border: 1px solid var(--switch-theme-color);
-
+    border-radius: var(--bar-height);
+    opacity: 0.5;
     transition: var(--switch-transition);
+    content: "";
 }
 
 /* checked bar */
@@ -95,21 +85,16 @@
 /* knob */
 .toggle-switch > label::after,
 .toggle-switch-label::after {
-    content: "";
-    box-sizing: border-box;
-
     position: absolute;
-
-    height: var(--knob-size);
+    box-sizing: border-box;
     width: var(--knob-size);
-
+    height: var(--knob-size);
     background: var(--knob-color);
-
     border-radius: 50%;
     box-shadow: var(--switch-box-shadow);
-
     transform: translateX(var(--knob-x));
     transition: var(--switch-transition);
+    content: "";
 }
 
 /* checked knob */
