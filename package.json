@@ -16,12 +16,17 @@
         "listdiff": "prettier -l \"src/*.css\" \"*.{md,js}\""
     },
     "devDependencies": {
-        "autoprefixer": "^9.4.10",
+        "autoprefixer": "^9.8.5",
         "cssnano": "^4.1.10",
-        "postcss": "^7.0.14",
-        "postcss-cli": "^6.1.2",
-        "prettier": "^1.16.4",
-        "stylelint": "^9.10.1",
-        "stylelint-config-recommended": "^2.1.0"
+        "postcss": "^7.0.32",
+        "postcss-cli": "^7.1.1",
+        "prettier": "^2.0.5",
+        "stylelint": "^13.6.1",
+        "stylelint-config-prettier": "^8.0.2",
+        "stylelint-config-rational-order": "^0.1.2",
+        "stylelint-config-recommended": "^3.0.0",
+        "stylelint-config-standard": "^20.0.0",
+        "stylelint-order": "^4.1.0",
+        "stylelint-prettier": "^1.1.2"
     }
 }
