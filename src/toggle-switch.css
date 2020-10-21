@@ -65,6 +65,9 @@
 /* bar */
 .toggle-switch > label::before,
 .toggle-switch-label::before {
+    position: absolute;
+    top: 0;
+    left: 0;
     box-sizing: border-box;
     width: var(--bar-width);
     height: var(--bar-height);
@@ -85,7 +88,6 @@
 /* knob */
 .toggle-switch > label::after,
 .toggle-switch-label::after {
-    position: absolute;
     box-sizing: border-box;
     width: var(--knob-size);
     height: var(--knob-size);
