@@ -1,0 +1,20 @@
+name: Test
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: ".node-version"
+      - uses: pnpm/action-setup@v2
+        with:
+          run_install: |
+            - args: [--frozen-lockfile, --strict-peer-dependencies]
+
+      - run: pnpm lint
+      - run: pnpm listdiff
+      - run: pnpm build
