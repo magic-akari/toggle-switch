@@ -20,8 +20,8 @@ devDependencies:
     specifier: ^13.7.2
     version: 13.7.2
   stylelint-config-prettier:
-    specifier: ^8.0.2
-    version: 8.0.2(stylelint@13.7.2)
+    specifier: ^9.0.0
+    version: 9.0.0(stylelint@13.7.2)
   stylelint-config-rational-order:
     specifier: ^0.1.2
     version: 0.1.2
@@ -3572,9 +3572,9 @@ packages:
       postcss-selector-parser: 6.0.11
     dev: true
 
-  /stylelint-config-prettier@8.0.2(stylelint@13.7.2):
-    resolution: {integrity: sha512-TN1l93iVTXpF9NJstlvP7nOu9zY2k+mN0NSFQ/VEGz15ZIP9ohdDZTtCWHs5LjctAhSAzaILULGbgiM0ItId3A==}
-    engines: {node: '>= 10', npm: '>= 5'}
+  /stylelint-config-prettier@9.0.0(stylelint@13.7.2):
+    resolution: {integrity: sha512-bxNgObNKN77MOFN9+3NmzaXW4OPAeGNS5Rl5g4P7lfPV61CHx13e5x/48w9HguUFhgq8Oe/KwP5rt2ucvjXVIA==}
+    engines: {node: '>= 12'}
     hasBin: true
     peerDependencies:
       stylelint: '>=11.0.0'
