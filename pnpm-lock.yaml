@@ -32,8 +32,8 @@ devDependencies:
     specifier: ^20.0.0
     version: 20.0.0(stylelint@13.7.2)
   stylelint-order:
-    specifier: ^4.1.0
-    version: 4.1.0(stylelint@13.7.2)
+    specifier: ^6.0.0
+    version: 6.0.0(stylelint@13.7.2)
   stylelint-prettier:
     specifier: ^1.1.2
     version: 1.1.2(prettier@2.1.2)(stylelint@13.7.2)
@@ -2958,12 +2958,12 @@ packages:
       postcss: 7.0.39
     dev: true
 
-  /postcss-sorting@5.0.1:
-    resolution: {integrity: sha512-Y9fUFkIhfrm6i0Ta3n+89j56EFqaNRdUKqXyRp6kvTcSXnmgEjaVowCXH+JBe9+YKWqd4nc28r2sgwnzJalccA==}
-    engines: {node: '>=8.7.0'}
+  /postcss-sorting@8.0.2(postcss@8.4.21):
+    resolution: {integrity: sha512-M9dkSrmU00t/jK7rF6BZSZauA5MAaBW4i5EnJXspMwt4iqTh/L9j6fgMnbElEOfyRyfLfVbIHj/R52zHzAPe1Q==}
+    peerDependencies:
+      postcss: ^8.4.20
     dependencies:
-      lodash: 4.17.21
-      postcss: 7.0.39
+      postcss: 8.4.21
     dev: true
 
   /postcss-svgo@6.0.0(postcss@8.1.2):
@@ -3040,6 +3040,15 @@ packages:
       line-column: 1.0.2
       nanoid: 3.3.6
       source-map: 0.6.1
+    dev: true
+
+  /postcss@8.4.21:
+    resolution: {integrity: sha512-tP7u/Sn/dVxK2NnruI4H9BG+x+Wxz6oeZ1cJ8P6G/PZY0IKk4k/63TDsQf2kQq3+qoJeLm2kIBUNlZe3zgb4Zg==}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: 3.3.6
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
     dev: true
 
   /prettier-linter-helpers@1.0.0:
@@ -3611,14 +3620,13 @@ packages:
       stylelint: 9.10.1
     dev: true
 
-  /stylelint-order@4.1.0(stylelint@13.7.2):
-    resolution: {integrity: sha512-sVTikaDvMqg2aJjh4r48jsdfmqLT+nqB1MOsaBnvM3OwLx4S+WXcsxsgk5w18h/OZoxZCxuyXMh61iBHcj9Qiw==}
+  /stylelint-order@6.0.0(stylelint@13.7.2):
+    resolution: {integrity: sha512-kRe3jv9gP9bN/puzaxWtQmjPSPC18n09DMRXv1HsW0nR8TDDCV+eo+a058A6GoogfV0qcAIZG4s2/4oyuaFqZA==}
     peerDependencies:
-      stylelint: ^10.0.1 || ^11.0.0 || ^12.0.0 || ^13.0.0
+      stylelint: ^14.0.0
     dependencies:
-      lodash: 4.17.21
-      postcss: 7.0.39
-      postcss-sorting: 5.0.1
+      postcss: 8.4.21
+      postcss-sorting: 8.0.2(postcss@8.4.21)
       stylelint: 13.7.2
     dev: true
 
