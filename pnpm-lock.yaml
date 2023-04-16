@@ -26,8 +26,8 @@ devDependencies:
     specifier: ^0.1.2
     version: 0.1.2
   stylelint-config-recommended:
-    specifier: ^11.0.0
-    version: 11.0.0(stylelint@13.7.2)
+    specifier: ^12.0.0
+    version: 12.0.0(stylelint@13.7.2)
   stylelint-config-standard:
     specifier: ^20.0.0
     version: 20.0.0(stylelint@13.7.2)
@@ -3608,10 +3608,10 @@ packages:
       - supports-color
     dev: true
 
-  /stylelint-config-recommended@11.0.0(stylelint@13.7.2):
-    resolution: {integrity: sha512-SoGIHNI748OCZn6BxFYT83ytWoYETCINVHV3LKScVAWQQauWdvmdDqJC5YXWjpBbxg2E761Tg5aUGKLFOVhEkA==}
+  /stylelint-config-recommended@12.0.0(stylelint@13.7.2):
+    resolution: {integrity: sha512-x6x8QNARrGO2sG6iURkzqL+Dp+4bJorPMMRNPScdvaUK8PsynriOcMW7AFDKqkWAS5wbue/u8fUT/4ynzcmqdQ==}
     peerDependencies:
-      stylelint: ^15.3.0
+      stylelint: ^15.5.0
     dependencies:
       stylelint: 13.7.2
     dev: true
