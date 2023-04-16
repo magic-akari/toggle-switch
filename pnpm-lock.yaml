@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^11.0.0
     version: 11.0.0(stylelint@13.7.2)
   stylelint-config-standard:
-    specifier: ^20.0.0
-    version: 20.0.0(stylelint@13.7.2)
+    specifier: ^33.0.0
+    version: 33.0.0(stylelint@13.7.2)
   stylelint-order:
     specifier: ^6.0.0
     version: 6.0.0(stylelint@13.7.2)
@@ -3616,21 +3616,21 @@ packages:
       stylelint: 13.7.2
     dev: true
 
-  /stylelint-config-recommended@3.0.0(stylelint@13.7.2):
-    resolution: {integrity: sha512-F6yTRuc06xr1h5Qw/ykb2LuFynJ2IxkKfCMf+1xqPffkxh0S09Zc902XCffcsw/XMFq/OzQ1w54fLIDtmRNHnQ==}
+  /stylelint-config-recommended@12.0.0(stylelint@13.7.2):
+    resolution: {integrity: sha512-x6x8QNARrGO2sG6iURkzqL+Dp+4bJorPMMRNPScdvaUK8PsynriOcMW7AFDKqkWAS5wbue/u8fUT/4ynzcmqdQ==}
     peerDependencies:
-      stylelint: '>=10.1.0'
+      stylelint: ^15.5.0
     dependencies:
       stylelint: 13.7.2
     dev: true
 
-  /stylelint-config-standard@20.0.0(stylelint@13.7.2):
-    resolution: {integrity: sha512-IB2iFdzOTA/zS4jSVav6z+wGtin08qfj+YyExHB3LF9lnouQht//YyB0KZq9gGz5HNPkddHOzcY8HsUey6ZUlA==}
+  /stylelint-config-standard@33.0.0(stylelint@13.7.2):
+    resolution: {integrity: sha512-eyxnLWoXImUn77+ODIuW9qXBDNM+ALN68L3wT1lN2oNspZ7D9NVGlNHb2QCUn4xDug6VZLsh0tF8NyoYzkgTzg==}
     peerDependencies:
-      stylelint: '>=10.1.0'
+      stylelint: ^15.5.0
     dependencies:
       stylelint: 13.7.2
-      stylelint-config-recommended: 3.0.0(stylelint@13.7.2)
+      stylelint-config-recommended: 12.0.0(stylelint@13.7.2)
     dev: true
 
   /stylelint-order@2.2.1(stylelint@9.10.1):
