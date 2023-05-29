@@ -15,7 +15,7 @@
         "lint": "stylelint src/*.css",
         "listdiff": "prettier -l \"src/*.css\" \"*.{md,js}\""
     },
-    "packageManager": "pnpm@8.1.0",
+    "packageManager": "pnpm@8.6.0",
     "devDependencies": {
         "autoprefixer": "^10.0.1",
         "cssnano": "^6.0.0",
